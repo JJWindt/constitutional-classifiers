@@ -18,7 +18,5 @@ def input_classifier(input):
     messages = [SystemMessage(content=prompt)] + [HumanMessage(content=input)]
 
     response = llm.invoke(messages)
-
-    response = "True" # REMOVE THIS
     
     return response

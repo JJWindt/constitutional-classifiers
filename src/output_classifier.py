@@ -19,6 +19,4 @@ def output_classifier(input):
 
     response = llm.invoke(messages)
 
-    response = "True" # REMOVE THIS
-
     return response
