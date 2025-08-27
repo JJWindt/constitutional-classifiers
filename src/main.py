@@ -24,7 +24,7 @@ while True:
 
     # Input classifier
     classification = input_classifier(user_input).content
-    print(classification)
+    print("Input: ", classification)
 
     if classification == "False":
         output = "I cannot say that."
@@ -37,7 +37,7 @@ while True:
     
     # Output classifier
     classification = output_classifier(output).content
-    print(classification)
+    print("Output: ", classification)
     if classification == "False":
         output = "I cannot say that."
 
