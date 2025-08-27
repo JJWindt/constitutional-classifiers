@@ -13,10 +13,12 @@ def output_classifier(input):
     """
     llm = ChatOpenAI(model="gpt-4.1")
 
-    prompt = "Return 'True'"
+    prompt = "Empty prompt"
 
     messages = [SystemMessage(content=prompt)] + [AIMessage(content=input)]
 
     response = llm.invoke(messages)
-    
+
+    response = "True" # REMOVE THIS
+
     return response
