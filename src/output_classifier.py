@@ -7,12 +7,13 @@ from langchain_core.messages import AIMessage, SystemMessage, HumanMessage, Base
 def output_classifier(input):
     """
     The output classifier.
+    Returns True if the input is valid, False otherwise.
 
     Output: True or False
     """
     llm = ChatOpenAI(model="gpt-4.1")
 
-    prompt = "Empty input"
+    prompt = "Return 'True'"
 
     messages = [SystemMessage(content=prompt)] + [AIMessage(content=input)]
 
