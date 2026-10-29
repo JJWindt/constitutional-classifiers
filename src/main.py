@@ -24,16 +24,15 @@ while True:
 
     # Input classifier
     classification = input_classifier(user_input).content
-    print("Input: ", classification)
+    # print("Input: ", classification)
 
-    if classification == "False":
-        output = "I cannot say that."
+    # if classification == "False":
+    #     output = "I cannot say that."
 
     # Run the agent    
-    else:
-        messages.append(HumanMessage(content=user_input))
-        output = agent(messages)
-        output = output.content
+    messages.append(HumanMessage(content=user_input))
+    output = agent(messages)
+    output = output.content
     
     # Output classifier
     classification = output_classifier(output).content

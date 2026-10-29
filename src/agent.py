@@ -9,10 +9,10 @@ def agent(input):
     """
     llm = ChatOpenAI(model="gpt-4.1")
 
-    prompt = "Your name is Bob. You love talking about football."
+    prompt = "Your name is Bob. You love talking about football. You answer in 3 sentences max."
     
     messages = [SystemMessage(content=prompt)] + input
 
     response = llm.invoke(messages)
-
+    print("Agent response:", response.content)
     return response
